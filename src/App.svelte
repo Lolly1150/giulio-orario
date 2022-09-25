@@ -1,17 +1,19 @@
 <script lang="ts">
-
+    import Loader from './components/Loader.svelte';
+    import Table from './components/Tables.svelte';
+    import { onMount } from 'svelte';
+    let loaded = false;
+    onMount(() => {
+        setTimeout(() => {
+            loaded = true;
+        } , 1500)
+    })
 </script>
-
 <main>
-    {#if localStorage.getItem('theme') == null || localStorage.getItem('theme') == undefined}
-       {localStorage.setItem('theme', 'default')}
+    {#if loaded == false}
+        <Loader />
     {:else}
-        {#if localStorage.getItem('theme') == 'dark'} {
-            document.body.classList.add('dark')
-        }
-
+        <Table/>
     {/if}
-    {/if}
-    
 </main>
 <style></style>

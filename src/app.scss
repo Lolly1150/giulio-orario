@@ -22,31 +22,35 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  @if ($theme == "default") {
-    background-color: $nord0;
-    color: $nord4;
-  } @else if($theme == "dark") {
-    background-color: $nord1;
-    color: $nord3;
-  } @else if($theme == "ligth") {
-    background-color: $nord4;
-    color: $nord0;
-  }
+  background-color: $nord1;
+  color: $nord4;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 ::selection {
   background-color: #5e81ac;
 }
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.table {
+  border: 1px solid $nord10;
+  border-radius: 10px;
+  &:hover {
+    border: 1px solid $nord8;
+    transition: border 0.5s ease-in-out;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+}
+.left-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+.rigth-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
 }

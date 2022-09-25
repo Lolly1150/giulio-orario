@@ -1,6 +1,6 @@
 import type { calendarInterface } from "./interfaces";
 
-const calendar: object = {
+const calendar: calendarInterface = {
   1: {
     1: {
       prof: "",
