@@ -34,23 +34,26 @@ body {
 }
 .table {
   border: 1px solid $nord10;
-  border-radius: 10px;
+  tr,
+  td {
+    border: 1px solid $nord10;
+    margin: 0;
+    padding: 10px;
+    background-color: $nord1;
+    color: $nord4;
+  }
   &:hover {
     border: 1px solid $nord8;
     transition: border 0.5s ease-in-out;
   }
 }
-.left-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: auto;
+.arrow-left {
+  margin-top: 10px;
+  background-color: rgba(107, 102, 102, 0);
+  border: 0px;
 }
-.rigth-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: auto;
+.arrow-right {
+  margin-top: 10px;
+  background-color: #0000;
+  border: 0px;
 }

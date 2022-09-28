@@ -155,7 +155,7 @@ export interface calendarInterface {
       subject: string;
     };
   };
-  7: {
+  0: {
     1: {
       prof: string;
       subject: string;

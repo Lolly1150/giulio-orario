@@ -3,24 +3,24 @@ import type { calendarInterface } from "./interfaces";
 const calendar: calendarInterface = {
   1: {
     1: {
-      prof: "",
-      subject: "",
+      prof: "Benvenuti Alessandro",
+      subject: "LETTERE",
     },
     2: {
-      prof: "",
-      subject: "",
+      prof: "Benvenuti Alessandro",
+      subject: "LETTERE",
     },
     3: {
-      prof: "",
-      subject: "",
+      prof: "Gandolfi Michele",
+      subject: "RELIGIONE",
     },
     4: {
-      prof: "",
-      subject: "",
+      prof: "Delsoldato Rossella",
+      subject: "MAT - COMPLEMENTI",
     },
     5: {
-      prof: "",
-      subject: "",
+      prof: "Delsoldato Rossella",
+      subject: "MATEMATICA",
     },
     6: {
       prof: "",
@@ -29,24 +29,24 @@ const calendar: calendarInterface = {
   },
   2: {
     1: {
-      prof: "",
-      subject: "",
+      prof: "Raschi Luca - Guido Tania",
+      subject: "ELETTRONICA ED ELETTROTECNICA",
     },
     2: {
-      prof: "",
-      subject: "",
+      prof: "Raschi Luca - Guido Tania",
+      subject: "ELETTRONICA ED ELETTROTECNICA",
     },
     3: {
-      prof: "",
-      subject: "",
+      prof: "Cucchi Mauro",
+      subject: "SISTEMI",
     },
     4: {
-      prof: "",
-      subject: "",
+      prof: "Cucchi Mauro",
+      subject: "SISTEMI",
     },
     5: {
-      prof: "",
-      subject: "",
+      prof: "Barzieri Maurizio - Guido Tania",
+      subject: "TDP",
     },
     6: {
       prof: "",
@@ -55,24 +55,24 @@ const calendar: calendarInterface = {
   },
   3: {
     1: {
-      prof: "",
-      subject: "",
+      prof: "Trolli Erick",
+      subject: "SC. MOTORIE e SPORTIVE",
     },
     2: {
-      prof: "",
-      subject: "",
+      prof: "Trolli Erick",
+      subject: "SC. MOTORIE e SPORTIVE",
     },
     3: {
-      prof: "",
-      subject: "",
+      prof: "Barzieri Maurizio - Guido Tania",
+      subject: "TDP",
     },
     4: {
-      prof: "",
-      subject: "",
+      prof: "Rugiano Alessandra",
+      subject: "INGLESE",
     },
     5: {
-      prof: "",
-      subject: "",
+      prof: "SUPPLENZA",
+      subject: "SISTEMI",
     },
     6: {
       prof: "",
@@ -81,24 +81,24 @@ const calendar: calendarInterface = {
   },
   4: {
     1: {
-      prof: "",
-      subject: "",
+      prof: "Barzieri Maurizio - Guido Tania",
+      subject: "TDP",
     },
     2: {
-      prof: "",
-      subject: "",
+      prof: "Delsoldato Rossela",
+      subject: "MATEMATICA",
     },
     3: {
-      prof: "",
-      subject: "",
+      prof: "Rugiano Alessandra",
+      subject: "INGLESE",
     },
     4: {
-      prof: "",
-      subject: "",
+      prof: "SUPPLENZA",
+      subject: "SISTEMI",
     },
     5: {
-      prof: "",
-      subject: "",
+      prof: "Benvenuti Alessandro",
+      subject: "LETTERE",
     },
     6: {
       prof: "",
@@ -107,24 +107,24 @@ const calendar: calendarInterface = {
   },
   5: {
     1: {
-      prof: "",
-      subject: "",
+      prof: "Rugiano Alessandra",
+      subject: "INGLESE",
     },
     2: {
-      prof: "",
-      subject: "",
+      prof: "Barzieri Maurizio",
+      subject: "TDP",
     },
     3: {
-      prof: "",
-      subject: "",
+      prof: "Raschi Luca - Guido Ta",
+      subject: "ELETTRONICA ED ELETTROTECNICA",
     },
     4: {
-      prof: "",
-      subject: "",
+      prof: "Raschi Luca - Guido Ta",
+      subject: "ELETTRONICA ED ELETTROTECNICA",
     },
     5: {
-      prof: "",
-      subject: "",
+      prof: "Benvenuti Alessandro",
+      subject: "LETTER",
     },
     6: {
       prof: "",
@@ -133,31 +133,31 @@ const calendar: calendarInterface = {
   },
   6: {
     1: {
-      prof: "",
-      subject: "",
+      prof: "Raschi Luca - Guido Ta",
+      subject: "ELETTRONICA ED ELETTROTECNICA",
     },
     2: {
-      prof: "",
-      subject: "",
+      prof: "Raschi Luca - Guido Ta",
+      subject: "ELETTRONICA ED ELETTROTECNICA",
     },
     3: {
-      prof: "",
-      subject: "",
+      prof: "Cucchi Mauro",
+      subject: "SISTEMI",
     },
     4: {
-      prof: "",
-      subject: "",
+      prof: "Benvenuti Alessandro",
+      subject: "LETTERE",
     },
     5: {
-      prof: "",
-      subject: "",
+      prof: "Delsoldato Rossella",
+      subject: "MATEMATICA",
     },
     6: {
       prof: "",
       subject: "",
     },
   },
-  7: {
+  0: {
     1: {
       prof: "",
       subject: "",
@@ -185,4 +185,50 @@ const calendar: calendarInterface = {
   },
 };
 
+export function getHours(day: number) {
+  switch (day) {
+    case 1:
+      {
+        return calendar[1];
+      }
+      break;
+    case 2:
+      {
+        return calendar[2];
+      }
+      break;
+    case 3:
+      {
+        return calendar[3];
+      }
+      break;
+    case 4:
+      {
+        return calendar[4];
+      }
+      break;
+    case 5:
+      {
+        return calendar[5];
+      }
+      break;
+    case 6:
+      {
+        return calendar[6];
+      }
+      break;
+
+    case 0:
+      {
+        return calendar[0];
+      }
+      break;
+
+    default:
+      {
+        return;
+      }
+      break;
+  }
+}
 export { calendar };
