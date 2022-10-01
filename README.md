@@ -1,48 +1,37 @@
-# Svelte + TS + Vite
+# GiulioAndOrario
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+<p  align="center" >
+<img src="./public/logo.png" width="150" height="150"/>
+</p>
 
-## Recommended IDE Setup
+Benvenuto nel sito GiulioAndOrario
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+## Informazioni Librerie Framework/Linguaggi/Librerie/Tema
 
-## Need an official Svelte framework?
+[ViteJs](https://vitejs.dev) (Compilatore)
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+[Svelte](https://svelte.dev) (Framework Web)
 
-## Technical considerations
+[Typescript](https://www.typescriptlang.org/) (SuperSet JavaScript)
 
-**Why use this over SvelteKit?**
+[Sass](https://sass-lang.com/) (Linguaggio)
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
-  `vite dev` and `vite build` wouldn't work in a SvelteKit environment, for example.
+[Nord](https://www.nordtheme.com/) (Tema Colori)
 
-This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+## Come configurare il progetto
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+Il progetto di base è gia configurato per l'uso (Si sconsiglia vivamente di modificare i file svelte.config.js / tsconfig.json e vite.config.ts per evitare problemi di incompatibilità)
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+In caso vorresti modificare l'orario è molto semplice basta modificare il file `./src/orario.ts` il file è un ogetto che segue l'interfaccia in `./src/interfaces/calendar.ts`, il primo paramentro è il giorno che è un ogetto dove dentro ci sono 6 ogetti ognuna rispettivamente per ogni ora del giorno
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+## Come buildare il sito
 
-**Why include `.vscode/extensions.json`?**
+Per prima cosa dobbiamo installare le dipendenze noi consigliamo di utilizare [Yarn](https://yarnpkg.com/) però tuttivia è supportato anche [Npm](https://npmjs.com) per installare le dipendenze basta utilizzare il comando
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+Dopo aver installato le dipendenze possiamo eseguire la build,per eseguirla basta fare `yarn build` o `npm run build`
 
-**Why enable `allowJs` in the TS template?**
+## Come avviare il sito
 
-While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
+Basta eseguire il comando `yarn preview` e `npm run preview`
 
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```ts
-// store.ts
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
+In caso di ulteriori informazioni potete contattare [Lolly#1150](https://discord.com/users/820726341976588340)

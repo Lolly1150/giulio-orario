@@ -26,15 +26,33 @@
     function onArrowLeft() {
         if(dayNumber < 0) return dayNumber = 7;
         if(dayNumber === undefined) return dayNumber = 7;
+        if(dayNumber == 0) {
+            dayNumber = 6;
+            return r = getHours(dayNumber)
+            //console.log("[D]" + dayNumber)
+        };
+        if(dayNumber == 1) {
+            dayNumber = 0
+            return r = getHours(dayNumber)
+            //return console.log("[D]" + dayNumber)
+        };
         dayNumber = dayNumber - 1;
         r = getHours(dayNumber)
-
+        console.log(r)
     }
     function onArrowRigth() {
-        if(dayNumber > 5) return dayNumber = 0;
-        if(dayNumber === undefined) return dayNumber = 0;
+        if(dayNumber > 5) {
+            dayNumber = 0;
+            return r = getHours(dayNumber)
+        }
+        if(dayNumber === undefined) {
+            dayNumber = 0;
+            return r = getHours(dayNumber)
+
+        }
         dayNumber = dayNumber + 1;
         r = getHours(dayNumber)
+        console.log(r)
     }
     
 </script>
